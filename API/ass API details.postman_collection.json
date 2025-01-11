@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "45c35c3c-33bb-4764-864b-163ac287d579",
+		"name": "ass API details",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36707086"
+	},
+	"item": [
+		{
+			"name": "read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8069/api/v1/api_details/student.details"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8069/api/v1/api_details/student.details/34"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"year\": \"2032\",\r\n        \"mark1\": 90,\r\n        \"mark2\": 78,\r\n        \"sid\": 22,\r\n        \"did\": \"D0001\",\r\n        \"create_uid\": 2,\r\n        \"create_date\": \"2025-01-10 09:34:06\",\r\n        \"write_uid\": 2,\r\n        \"write_date\": \"2025-01-10 09:34:06\",\r\n        \"id\": 38\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8069/api/v1/api_details/student.details/22"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"year\": \"2020\",\r\n        \"mark1\": 90,\r\n        \"mark2\": 67,\r\n        \"sid\": 19,\r\n        \"did\": \"D0002\",\r\n        \"create_uid\": 2,\r\n        \"create_date\": \"2025-01-10 09:28:59\",\r\n        \"write_uid\": 2,\r\n        \"write_date\": \"2025-01-10 09:28:59\",\r\n        \"id\": 45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8069/api/v1/api_details/student.details"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "6a489a59-de7c-4406-b70f-947c5d860540",
+			"username": "admin"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

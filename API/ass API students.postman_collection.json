@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "3de2eaf0-3144-4a29-a006-eaeebba12ef1",
+		"name": "ass API students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36707086"
+	},
+	"item": [
+		{
+			"name": "students",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "6a489a59-de7c-4406-b70f-947c5d860540",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8069/api/v1/students/students.students"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "6a489a59-de7c-4406-b70f-947c5d860540",
+						"username": "admin"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8069/api/v1/students/students.students/20"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "6a489a59-de7c-4406-b70f-947c5d860540",
+						"username": "admin"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n    \"name\": \"MG h\",\r\n    \"nrc\": \"H/H(H)89764332\",\r\n    \"birthdate\": \"2023-10-17 00:00:00\",\r\n    \"sid\": \"S0001\",\r\n    \"fname\": \"U H\",\r\n    \"state\": \"mm\",\r\n    \"division\": \"th\",\r\n    \"address\": \"ch\",\r\n    \"email\": \"h@gmail.com\",\r\n    \"phone\": \"876532\"\r\n    \r\n    \r\n  }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8069/api/v1/students/students.students/19"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "6a489a59-de7c-4406-b70f-947c5d860540",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"name\": \"MG V\",\r\n        \"nrc\": \"V(V)89764332\",\r\n        \"birthdate\": \"2023-10-17 00:00:00\",\r\n        \"sid\": \"S1000\",\r\n        \"fname\": \"U V\",\r\n        \"state\": \"mm\",\r\n        \"division\": \"th\",\r\n        \"address\": \"ch\",\r\n        \"email\": \"F@gmail.com\",\r\n        \"phone\": \"876532\",\r\n        \"create_uid\": 2,\r\n        \"create_date\": \"2025-01-10 09:25:49\",\r\n        \"write_uid\": 2,\r\n        \"write_date\": \"2025-01-10 09:42:29\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8069/api/v1/students/students.students"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "6a489a59-de7c-4406-b70f-947c5d860540",
+			"username": "admin"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
