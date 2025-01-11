@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+
+<!-- students_application_form -->
+<record id="record_action" model="ir.actions.act_window">
+    <field name="name">Students Application</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">students.students</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create a new record!
+        </p>
+    </field>
+ </record>
+
+<!-- menu items for students -->
+<menuitem id="parent_menu_root"
+         name="Students"
+         sequence="6"/>
+<menuitem id="menu_id"
+         name="Students Application"
+         parent="parent_menu_root"
+         action="record_action"
+         sequence="10"/>
+
+
+<record id="students_application_form" model="ir.ui.view">
+            <field name="name">students.application.form</field>
+            <field name="model">students.students</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                    <group>
+                        <group>
+                            <field name="sid"/>
+                            <field name="name"/>
+                            <field name="birthdate"/>
+                            <field name="nrc"/>
+                            <field name="fname"/>
+                        </group>
+                        <group>
+                            <field name="state"/>
+                            <field name="division"/>
+                            <field name="address"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Details">
+                            <field name="student_details" widget="one2many_list">
+                                <tree editable="bottom">
+                                    <field name="did"/>
+                                    <field name="year"/>
+                                    <field name="mark1"/>
+                                    <field name="mark2"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+         </record>
+        <record id="view_student_details_tree" model="ir.ui.view">
+                <field name="name">view.student.details.tree</field>
+                <field name="model">student.details</field>
+                <field name="arch" type="xml">
+            <tree string="Student Details">
+                
+                    <field name="did"/>
+                    <field name="year"/>
+                    <field name="mark1"/>
+                    <field name="mark2"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- tree view of student -->
+        <record id="view_student_tree" model="ir.ui.view">
+            <field name="name">students.students.tree</field>
+            <field name="model">students.students</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sid"/>
+                    <field name="name"/>
+                    <field name="birthdate"/>
+                    <field name="nrc"/>
+                    <field name="fname"/>
+                    <field name="state"/>
+                    <field name="division"/>
+                    <field name="address"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+    <!-- tree view of student -->
+    </data>
+</odoo>
